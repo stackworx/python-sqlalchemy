@@ -1,6 +1,7 @@
+import io
 from setuptools import setup
 
-version = open('VERSION').read()
+version = io.open('VERSION').read()
 setup(
     name='sqlalchemy_opentracing',
     version=version,
@@ -10,7 +11,7 @@ setup(
     author='Carlos Alberto Cortez',
     author_email='calberto.cortez@gmail.com',
     description='OpenTracing support for SQLAlchemy',
-    long_description=open('README.rst').read(),
+    long_description=io.open('README.rst', encoding='utf8').read(),
     packages=['sqlalchemy_opentracing'],
     platforms='any',
     install_requires=[
